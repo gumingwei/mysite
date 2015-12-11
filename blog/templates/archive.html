@@ -1,0 +1,20 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title></title>
+<head>
+    <title>Xiaoyanzi</title>
+</head>
+<body>
+<!--<label>this is Technical blog</label>-->
+{% extends 'base.html' %}
+{% block content %}
+    {% for post in posts %}
+        <h2>{{ post.blog_title }}</h2>
+        <p>{{ post.blog_timestamp|date }}</p>
+        <p>{{ post.blog_body }}</p>
+    {% endfor %}
+{% endblock %}
+</body>
+</html>
